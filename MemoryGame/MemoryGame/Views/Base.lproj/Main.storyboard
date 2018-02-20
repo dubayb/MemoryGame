@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTq-u6-1fR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Lobby View Controller-->
+        <scene sceneID="hDE-B9-dxs">
+            <objects>
+                <viewController id="OqA-tP-nqQ" customClass="LobbyViewController" customModule="MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydZ-Z9-bFC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anX-3t-g7Q">
+                                <rect key="frame" x="18.5" y="132" width="337.5" height="37"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-5F-9Dq">
+                                <rect key="frame" x="20" y="259" width="335" height="301.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tk-NH-ecp">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="5 X 2"/>
+                                        <connections>
+                                            <action selector="gridStyleChosen:" destination="OqA-tP-nqQ" eventType="touchUpInside" id="9mH-Qu-mEm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttN-jT-ZvU">
+                                        <rect key="frame" x="0.0" y="80.5" width="335" height="60.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="3 X 4"/>
+                                        <connections>
+                                            <action selector="gridStyleChosen:" destination="OqA-tP-nqQ" eventType="touchUpInside" id="XVs-7a-iRs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSn-IP-I19">
+                                        <rect key="frame" x="0.0" y="161" width="335" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="4 X 4"/>
+                                        <connections>
+                                            <action selector="gridStyleChosen:" destination="OqA-tP-nqQ" eventType="touchUpInside" id="ne6-ti-JSg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUZ-d9-I7V">
+                                        <rect key="frame" x="0.0" y="241" width="335" height="60.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="4 X 5"/>
+                                        <connections>
+                                            <action selector="gridStyleChosen:" destination="OqA-tP-nqQ" eventType="touchUpInside" id="IKJ-AF-Gjk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7f7-5F-9Dq" firstAttribute="top" secondItem="anX-3t-g7Q" secondAttribute="bottom" constant="90" id="B6v-2q-bxE"/>
+                            <constraint firstItem="bjK-dZ-UJz" firstAttribute="trailing" secondItem="7f7-5F-9Dq" secondAttribute="trailing" constant="20" id="X1M-xS-xeW"/>
+                            <constraint firstItem="7f7-5F-9Dq" firstAttribute="height" secondItem="bjK-dZ-UJz" secondAttribute="height" multiplier="0.5" id="n0z-0H-e7J"/>
+                            <constraint firstItem="anX-3t-g7Q" firstAttribute="centerX" secondItem="bjK-dZ-UJz" secondAttribute="centerX" id="nn6-Nc-hds"/>
+                            <constraint firstItem="anX-3t-g7Q" firstAttribute="width" secondItem="ydZ-Z9-bFC" secondAttribute="width" multiplier="0.9" id="o3H-mb-koF"/>
+                            <constraint firstItem="7f7-5F-9Dq" firstAttribute="leading" secondItem="bjK-dZ-UJz" secondAttribute="leading" constant="20" id="pBh-gt-Z8i"/>
+                            <constraint firstItem="anX-3t-g7Q" firstAttribute="top" secondItem="bjK-dZ-UJz" secondAttribute="top" constant="68" id="pTo-C6-1A0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bjK-dZ-UJz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6SD-Uf-d9j"/>
+                    <connections>
+                        <outletCollection property="gridButtons" destination="4Tk-NH-ecp" collectionClass="NSMutableArray" id="TmK-xf-rfT"/>
+                        <outletCollection property="gridButtons" destination="ttN-jT-ZvU" collectionClass="NSMutableArray" id="LSt-kY-WGB"/>
+                        <outletCollection property="gridButtons" destination="SSn-IP-I19" collectionClass="NSMutableArray" id="9gc-Ti-B27"/>
+                        <outletCollection property="gridButtons" destination="qUZ-d9-I7V" collectionClass="NSMutableArray" id="jB8-ZY-bXG"/>
+                        <segue destination="0Gr-xq-9gO" kind="show" identifier="ShowCardView" id="A42-AD-xiT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiU-ol-jlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858.39999999999998" y="139.880059970015"/>
+        </scene>
+        <!--Card Collection View Controller-->
+        <scene sceneID="LuC-jA-qL0">
+            <objects>
+                <collectionViewController id="0Gr-xq-9gO" customClass="CardCollectionViewController" customModule="MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sgz-Iy-cMF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BoJ-t1-5Gp">
+                            <size key="itemSize" width="97" height="79"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="JMK-5U-aWk" customClass="CardCollectionViewCell" customModule="MemoryGame" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="97" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="97" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="aAw-rk-Vpk">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="79"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aAw-rk-Vpk" secondAttribute="trailing" id="HKq-Un-mQe"/>
+                                    <constraint firstItem="aAw-rk-Vpk" firstAttribute="leading" secondItem="JMK-5U-aWk" secondAttribute="leading" id="Kv2-te-ojT"/>
+                                    <constraint firstAttribute="bottom" secondItem="aAw-rk-Vpk" secondAttribute="bottom" id="mBv-G6-J4L"/>
+                                    <constraint firstItem="aAw-rk-Vpk" firstAttribute="top" secondItem="JMK-5U-aWk" secondAttribute="top" id="rZe-Jq-mBA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cardImageView" destination="aAw-rk-Vpk" id="J0B-td-aKh"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0Gr-xq-9gO" id="qG2-hj-2K6"/>
+                            <outlet property="delegate" destination="0Gr-xq-9gO" id="Tdo-Oe-ebB"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQH-lP-npI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="140"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Xq-cM-12y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CTq-u6-1fR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wif-Qr-kRc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OqA-tP-nqQ" kind="relationship" relationship="rootViewController" id="zO9-Po-2Sl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf7-VO-Sfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="140"/>
+        </scene>
+    </scenes>
+</document>
